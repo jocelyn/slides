@@ -11,8 +11,8 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #ddebfa;
-  background-color: #ddebfa;
+  background: #fff;
+  background-color: #fff;
 }
 
 .reveal {
@@ -44,7 +44,7 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #000;
+  color: #fff;
   font-family: "Arial", Impact, sans-serif;
   font-weight: normal;
   line-height: 1.2;
@@ -499,9 +499,9 @@ EiffelStudio style (c) Jocelyn Fiat <jfiat@eiffel.com>
 .reveal span.logo {
   float: left;
   display: inline-block;
-  width: 250px;
+  width: 65px;
   height: 100px;
-  background-image: url("logo.png");
+  background-image: url("logo_icon.png");
   background-repeat: no-repeat;
   background-position: left top 0;
 }
@@ -509,29 +509,31 @@ EiffelStudio style (c) Jocelyn Fiat <jfiat@eiffel.com>
   content: " ";
 }
 
-.reveal h2 {
-  color: #4672b9;
+.reveal section {
+  background: none;
+  min-height: 95%;
+}
+.reveal section h2, .reveal section h3, .reveal section h4 {
+  color: #fff;
+  background: #0B5394 url("bg.jpg") no-repeat right bottom 0px;
+}
+.reveal section h2 {
   line-height: 1em;
   padding: 5px 5px 15px 5px;
-  background-color: white;
-  border-top: solid 2px rgba(0, 0, 210, 0.4);
-  margin: 0;
   font-weight: bold;
   font-size: 56px;
 }
-
-.reveal h3 {
-  color: #4672b9;
+.reveal section h3 {
   line-height: 0.9em;
-  background-color: white;
   padding: 5px 5px 15px 5px;
-  border-top: solid 2px rgba(0, 0, 210, 0.4);
   font-weight: bold;
   font-size: 48px;
 }
-
-.reveal section {
-  min-height: 80%;
+.reveal section h4, .reveal section h5, .reveal section h6 {
+  line-height: 0.8em;
+  padding: 5px 5px 15px 5px;
+  font-weight: bold;
+  font-size: 42px;
 }
 .reveal section .footer {
   position: absolute;
@@ -540,12 +542,45 @@ EiffelStudio style (c) Jocelyn Fiat <jfiat@eiffel.com>
   font-size: 18px;
   padding-top: 4px;
   vertical-align: middle;
-  color: #000;
+  color: #fff;
   display: inline-block;
   width: 100%;
   height: 30px;
-  text-align: right;
+  background: url("logo_icon_h30.png") no-repeat left top, url("bg.jpg") no-repeat left -550px top -500px;
 }
 .reveal section .footer a {
-  color: #000;
+  color: #fff;
+}
+.reveal section.full {
+  color: #fff;
+  background: #0B5394 url("bg.jpg") repeat left top 0px;
+  background-size: cover;
+}
+.reveal section.full a {
+  color: #fff;
+}
+.reveal section.full h2, .reveal section.full h3, .reveal section.full h4 {
+  color: #fff;
+  background: none;
+}
+.reveal section.full h5, .reveal section.full h6 {
+  color: #fff;
+}
+.reveal section.full .footer {
+  background: url("logo_icon_h30.png") no-repeat left top;
+}
+.reveal section.full ul {
+  width: 70%;
+}
+
+/* Top sections */
+.reveal :not(section) section {
+  min-height: 95%;
+  background-position: right bottom 0px;
+  background: linear-gradient(180deg, white 98%, #0B5394);
+}
+
+.reveal pre > code {
+  font-size: 95%;
+  max-height: 100% !important;
 }

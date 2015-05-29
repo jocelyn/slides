@@ -13,14 +13,20 @@
 // ---------------------------------------------
 
 
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+
 // Override theme settings (see ../template/settings.scss)
-$mainFont: 'Verdana', sans-serif;
+$mainFont: 'Lato', sans-serif;
 $mainColor: #000;
 $headingFont: 'Arial', Impact, sans-serif;
 $headingColor: #fff;
 $headingTextShadow: none;
 $headingTextTransform: none;
-$headingBackgroundColor: #1FA29A;
+$headingBackgroundColor: #0B5394;
 $backgroundColor: #fff;
 $linkColor: #00008B;
 $linkColorHover: lighten( $linkColor, 20% );
@@ -51,7 +57,7 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 .reveal section {
 	h2, h3, h4 {
 		color: $headingColor;
-		background: $headingBackgroundColor url("bg.jpg") no-repeat left top 0px;
+		background: $headingBackgroundColor url("bg.jpg") no-repeat right bottom 0px;
 	}
 	h2 {
 		line-height: 1em;
@@ -72,7 +78,21 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 		font-size: 42px;
 	}
 
-	&.full {
+	.footer {
+		position: absolute;
+		bottom: 0px;
+		right: 0;
+		font-size: 18px;
+		padding-top: 4px;
+		vertical-align: middle;
+		color: $headingColor;
+		display: inline-block;
+		width: 100%;
+		height: 30px;
+		background: url("logo_icon_h30.png") no-repeat left top, url("bg.jpg")  no-repeat left -550px top -500px;
+		& a { color: $headingColor; }
+	}
+	&.full  {
 		color: $headingColor;
 		background: $headingBackgroundColor url("bg.jpg") repeat left top 0px;
 		background-size: cover;
@@ -86,31 +106,16 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 		h5,h6 {
 			color: $headingColor;
 		}
-
 		.footer {
-			background: url("logo_136x30.png") no-repeat left top;
+			background: url("logo_icon_h30.png") no-repeat left top;
 		}
 		ul {
 			width: 70%;
 		}
 	}
-	.footer {
-		position: absolute;
-		bottom: 0px;
-		right: 0;
-		font-size: 18px;
-		padding-top: 4px;
-		vertical-align: middle;
-		color: $headingColor;
-		display: inline-block;
-		width: 100%;
-		height: 30px;
-		background: url("logo_136x30.png") no-repeat left top, url("bg.jpg")  no-repeat left -550px top -500px;
-		& a { color: $headingColor; }
-	}
 
 	background: none;
-	min-height: 80%;
+	min-height: 95%;
 }
 
 /* Top sections */
@@ -119,8 +124,8 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 	background-position: right bottom 0px;
 	background: linear-gradient(180deg, white 98%, $headingBackgroundColor);
 }
-
 .reveal pre>code {
 	font-size: 95%;
 	max-height: 100% !important;
 }
+

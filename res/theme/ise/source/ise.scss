@@ -37,6 +37,10 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 @import "../../../reveal.js/css/theme/template/theme";
 // ---------------------------------------------
 
+// hljs ----------------------------------------
+@import "hljs";
+// ---------------------------------------------
+
 .reveal span.logo {
 	float: left;
 	display: inline-block;
